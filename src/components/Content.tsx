@@ -14,7 +14,7 @@ const Content: React.FC<ChildComponentProps> = ({ meaning }) => {
     const pausePath = '/assets/pause_button.svg'
 
     const handleAudio = ()=>{
-        const audioElement = document.getElementById("audio-element")
+        const audioElement = document.getElementById("audio-element") as HTMLAudioElement
         if (audioElement) {
             if (audio) {
               audioElement.pause();
@@ -42,7 +42,7 @@ const Content: React.FC<ChildComponentProps> = ({ meaning }) => {
                 <div className='flex'>
                     <button onClick={handleAudio}>
                         <Image className='mt-[36px] ml-[18px]' src={`${audio ? pausePath : playPath}`} width={61} height={61} alt='Play button' />
-                        <audio id="audio-element" src={`${meaning[0].phonetics?.filter((item)=>{
+                        <audio id="audio-element" src={`${meaning[0].phonetics?.filter((item: { audio: string; })=>{
                             return item.audio!==""
                         })[0].audio}`}></audio>
                     </button>
