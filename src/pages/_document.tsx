@@ -4,7 +4,9 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head >
-        <title>Capitech</title>
+        <title>
+          CipherDefine
+        </title>
         <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"></link>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -14,6 +16,6 @@ export default function Document() {
         <Main />
         <NextScript />
       </body>
-      </Html>
+    </Html>
   )
 }

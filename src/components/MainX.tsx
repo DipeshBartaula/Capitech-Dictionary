@@ -4,12 +4,12 @@ import Content from './Content'
 import { useState } from 'react'
 
 const MainX = () => {
-  const [meaning,setMeaning] = useState<any>([])
+  const [meaning, setMeaning] = useState<any>([])
   return (
     <>
-        <Search setMeaning={setMeaning}/>
-        {meaning.length>0?<Content meaning={meaning} /> : <></>}
-        
+      <Search setMeaning={setMeaning} />
+      {meaning.length > 0 ? <Content meaning={meaning} /> : <></>}
+
     </>
   )
 }
